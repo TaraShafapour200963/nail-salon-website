@@ -1,0 +1,521 @@
+/* =========================
+   Font
+========================= */
+
+@font-face {
+    font-family: "Estedad";
+    src: url("../fonts/Estedad-v5.0-Fontjo.com/Estedad-SemiBold.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Estedad";
+    src: url("../fonts/Estedad-v5.0-Fontjo.com/Estedad-ExtraBold.woff2") format("woff2");
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Estedad";
+    src: url("../fonts/Estedad-v5.0-Fontjo.com/Estedad-Black.woff2") format("woff2");
+    font-weight: 900;
+    font-style: normal;
+}
+
+
+/* =========================
+   Reset
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    direction: rtl;
+}
+
+
+body {
+    font-family: "Estedad", sans-serif;
+    background: var(--background-color2);
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   Colors
+========================= */
+
+:root {
+    --background-color: #FFFFFF;
+    --background-color2: #FDF4F5;
+    --text-color: #201E1E;
+    --text-color2: #5A524C;
+    --primary-color: #D29C9D;
+    --pink-button: #D14E5F;
+    --text-color3: #F5EEE6;
+    --card-background: rgba(255, 255, 255, 0.80);
+    --border-color: #E7DCD1;
+    --icon-background: #F6E9E3;
+}
+body.dark-mode {
+    /* بک‌گراند کل سایت */
+    --background-color2: #1A1817;
+
+    /* بک‌گراند Navbar */
+    --background-color: #201E1E;
+
+    /* تمام متن‌ها */
+    --text-color: #F5EEE6;
+    --text-color2: #F5EEE6;
+
+    /* رنگ‌های صورتی - بدون تغییر */
+    --primary-color: #D29C9D;
+    --pink-button: #D14E5F;
+
+    /* کارت‌ها */
+    --card-background: #201E1E;
+    --border-color: #AFA8A0;
+
+    /* آیکون‌ها - در هر دو تم یکسان */
+    --icon-background: #F6E9E3;
+}
+
+/* =========================
+   Navbar
+========================= */
+
+.navbar {
+    width: 100%;
+    height: 70px;
+    background-color: var(--background-color);
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+
+.navbar-container {
+    width: 97%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+
+/* =========================
+   Logo
+========================= */
+
+.logo {
+    width: 90px;
+    height: 65px;
+}
+
+
+/* =========================
+   Navigation Menu
+========================= */
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    justify-content: start;
+    margin-left: 500px;
+    margin-right: 40px;
+    
+}
+
+
+.nav-link {
+    color: var(--text-color2);
+    font-size: 16px;
+    font-family: "Estedad", sans-serif;
+    font-weight: 600;
+    padding: 5px 8px;
+    cursor: pointer;
+    text-decoration: none;
+
+}
+
+
+.nav-link:hover {
+    background-color: color-mix(
+        in srgb,
+        var(--primary-color) 15%,
+        transparent
+    );
+    border-radius: 30px;
+}
+body.dark-mode .nav-link:hover {
+    background-color: rgba(245, 238, 230, 0.15);
+}
+
+
+
+/* =========================
+   Theme Button
+========================= */
+.theme-button {
+    width: 20px;
+    height: 20px;
+
+    border: none;
+    background: transparent;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    color: var(--text-color);
+
+    font-family: "Estedad", sans-serif;
+    margin-left: 20px;
+    margin-top: 5px;
+    padding: 15px 15px;
+
+}
+
+
+.theme-button img {
+    width: 25px;
+    height: 25px;
+}
+
+.theme-button:hover {
+    background-color: color-mix(
+        in srgb,
+        var(--primary-color) 15%,
+        transparent
+    );
+    border-radius: 30px;
+}
+body.dark-mode .nav-link:hover {
+    background-color: rgba(245, 238, 230, 0.15);
+}
+
+/* =========================
+   Reservation Button
+========================= */
+.reservation-button img{
+    width: 25px;
+    height: 25px;
+}
+
+.reservation-button {
+    height: 42px;
+
+    padding: 0 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+    gap: 8px;
+
+    background-color: var(--pink-button);
+    color: white;
+    box-shadow: 0 1px 4px rgba(209, 78, 95, 0.20);
+
+    text-decoration: none;
+
+    border-radius: 30px;
+    border: none;
+
+    font-family: "Estedad", sans-serif;
+    font-weight: 900;
+    font-size: 16px;
+    transition: top 0.10s ease-in-out;
+    position: relative;
+    cursor: pointer;
+}
+
+
+
+.reservation-button:hover {
+    top: -2px;
+}
+
+
+
+
+
+
+
+
+/* ================= Gallery Page ================= */
+
+.gallery {
+    padding: 70px 0 100px;
+}
+
+.gallery-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery-header {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.gallery-header h1 {
+    color: var(--text-color);
+    font-family: "Estedad";
+    font-size: 36px;
+    font-weight: 900;
+    margin-bottom: 12px;
+    text-shadow: 0 3px 3px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-header p {
+    color: var(--text-color2);
+    font-family: "Estedad";
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+}
+
+.gallery-item {
+    aspect-ratio: 1 / 1.01;
+    overflow: hidden;
+    border-radius: 40px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+/* =========================
+   Footer
+========================= */
+
+.footer {
+    width: 100%;
+
+    background-color: var(--text-color);
+
+    color: white;
+
+    direction: rtl;
+
+    position: relative;
+    margin-top: 100px;
+}
+
+body.dark-mode .footer {
+    background-color: #201E1E;
+}
+.footer-container {
+    width: 90%;
+    max-width: 1200px;
+
+    min-height: 300px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1.5fr 1fr;
+
+    align-items: start;
+
+    gap: 60px;
+    direction: ltr;
+
+    padding: 25px 0 20px;
+}
+.footer-column h3 {
+    color: var(--text-color3);
+
+    font-size: 19px;
+    font-weight: 900;
+
+    margin-bottom: 18px;
+}
+.footer-links {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    text-align: right;
+
+    padding-top: 20px;
+    direction: rtl;
+}
+
+.footer-links a {
+    color: var(--text-color3);
+
+    font-size: 15px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    margin-bottom: 9px;
+
+    transition: 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: var(--pink-button);
+
+    transform: translateX(-3px);
+}
+.footer-center {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+    direction: rtl;
+
+}
+.footer-logo {
+    width: 230px;
+    height: auto;
+
+    object-fit: contain;
+
+    margin-bottom: 5px;
+}
+.footer-center p {
+    color: var(--text-color3);
+
+    font-size: 14px;
+    font-weight: 600;
+
+    line-height: 1.8;
+
+    margin: 0;
+}
+.social-icons {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    direction: ltr;
+
+    gap: 28px;
+
+    margin-top: 25px;
+}
+.social-icon {
+    width: 34px;
+    height: 34px;
+
+    border: 1.5px solid #F5EEE6;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #F5EEE6;
+
+    text-decoration: none;
+
+    font-size: 19px;
+
+    transition: 0.2s ease;
+}
+.social-icon:hover {
+    color: var(--pink-button);
+
+    border-color: var(--pink-button);
+
+    transform: translateY(-2px);
+}
+.footer-contact {
+    padding-top: 20px;
+
+    text-align: right;
+    direction: rtl;
+}
+.contact-item {
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: flex-start;
+
+    gap: 10px;
+
+    margin-bottom: 13px;
+}
+.contact-item i {
+    color: var(--pink-button);
+
+    font-size: 17px;
+
+    width: 20px;
+
+    text-align: center;
+
+    margin-top: 3px;
+
+    flex-shrink: 0;
+}
+.contact-item p {
+    color: #F5EEE6;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    line-height: 1.7;
+
+    margin: 0;
+}
+.footer-bottom {
+    width: 100%;
+
+    border-top: 1px solid rgba(245, 238, 230, 0.25);
+
+    padding: 9px 3% 8px;
+
+    display: flex;
+
+    justify-content: flex-start;
+
+    direction: rtl;
+}
+.footer-bottom p {
+    color: rgba(245, 238, 230, 0.65);
+
+    font-size: 12px;
+    font-weight: 600;
+
+    margin: 0;
+}

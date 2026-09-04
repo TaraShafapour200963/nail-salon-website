@@ -1,0 +1,1656 @@
+/* =========================
+   Font
+========================= */
+
+@font-face {
+    font-family: "Estedad";
+    src: url("../fonts/Estedad-v5.0-Fontjo.com/Estedad-SemiBold.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Estedad";
+    src: url("../fonts/Estedad-v5.0-Fontjo.com/Estedad-ExtraBold.woff2") format("woff2");
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Estedad";
+    src: url("../fonts/Estedad-v5.0-Fontjo.com/Estedad-Black.woff2") format("woff2");
+    font-weight: 900;
+    font-style: normal;
+}
+
+
+/* =========================
+   Reset
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    direction: rtl;
+}
+
+
+body {
+    font-family: "Estedad", sans-serif;
+    background: var(--background-color2);
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   Colors
+========================= */
+
+:root {
+    --background-color: #FFFFFF;
+    --background-color2: #FDF4F5;
+    --text-color: #201E1E;
+    --text-color2: #5A524C;
+    --primary-color: #D29C9D;
+    --pink-button: #D14E5F;
+    --text-color3: #F5EEE6;
+    --card-background: rgba(255, 255, 255, 0.80);
+    --border-color: #E7DCD1;
+    --icon-background: #F6E9E3;
+}
+body.dark-mode {
+    /* بک‌گراند کل سایت */
+    --background-color2: #1A1817;
+
+    /* بک‌گراند Navbar */
+    --background-color: #201E1E;
+
+    /* تمام متن‌ها */
+    --text-color: #F5EEE6;
+    --text-color2: #F5EEE6;
+
+    /* رنگ‌های صورتی - بدون تغییر */
+    --primary-color: #D29C9D;
+    --pink-button: #D14E5F;
+
+    /* کارت‌ها */
+    --card-background: #201E1E;
+    --border-color: #AFA8A0;
+
+    /* آیکون‌ها - در هر دو تم یکسان */
+    --icon-background: #F6E9E3;
+}
+
+/* =========================
+   Navbar
+========================= */
+
+.navbar {
+    width: 100%;
+    height: 70px;
+    background-color: var(--background-color);
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+
+.navbar-container {
+    width: 97%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+
+/* =========================
+   Logo
+========================= */
+
+.logo {
+    width: 90px;
+    height: 65px;
+}
+
+
+/* =========================
+   Navigation Menu
+========================= */
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    justify-content: start;
+    margin-left: 500px;
+    margin-right: 40px;
+    
+}
+
+
+.nav-link {
+    color: var(--text-color2);
+    font-size: 16px;
+    font-family: "Estedad", sans-serif;
+    font-weight: 600;
+    padding: 5px 8px;
+    cursor: pointer;
+    text-decoration: none;
+
+}
+
+
+.nav-link:hover {
+    background-color: color-mix(
+        in srgb,
+        var(--primary-color) 15%,
+        transparent
+    );
+    border-radius: 30px;
+}
+body.dark-mode .nav-link:hover {
+    background-color: rgba(245, 238, 230, 0.15);
+}
+
+
+
+/* =========================
+   Theme Button
+========================= */
+.theme-button {
+    width: 20px;
+    height: 20px;
+
+    border: none;
+    background: transparent;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    color: var(--text-color);
+
+    font-family: "Estedad", sans-serif;
+    margin-left: 20px;
+    margin-top: 5px;
+    padding: 15px 15px;
+
+}
+
+
+.theme-button img {
+    width: 25px;
+    height: 25px;
+}
+
+.theme-button:hover {
+    background-color: color-mix(
+        in srgb,
+        var(--primary-color) 15%,
+        transparent
+    );
+    border-radius: 30px;
+}
+body.dark-mode .nav-link:hover {
+    background-color: rgba(245, 238, 230, 0.15);
+}
+
+/* =========================
+   Reservation Button
+========================= */
+.reservation-button img{
+    width: 25px;
+    height: 25px;
+}
+
+.reservation-button {
+    height: 42px;
+
+    padding: 0 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+    gap: 8px;
+
+    background-color: var(--pink-button);
+    color: white;
+    box-shadow: 0 1px 4px rgba(209, 78, 95, 0.20);
+
+    text-decoration: none;
+
+    border-radius: 30px;
+    border: none;
+
+    font-family: "Estedad", sans-serif;
+    font-weight: 900;
+    font-size: 16px;
+    transition: top 0.10s ease-in-out;
+    position: relative;
+    cursor: pointer;
+}
+
+
+
+.reservation-button:hover {
+    top: -2px;
+}
+
+
+
+/* =========================
+   Hero
+========================= */
+
+.hero {
+    width: 100%;
+}
+
+
+.hero-container {
+    width: 90%;
+    max-width: 1300px;
+
+    margin: 0 auto;
+
+    min-height: 400px;
+
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: flex-start;
+
+    gap: 330px;
+
+    padding-top: 60px;
+
+    direction: ltr;
+}
+.hero-image {
+    width: 350px;
+    height: 420px;
+
+    flex-shrink: 0;
+}
+
+.hero-image img {
+    width: 110%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 80px;
+
+    display: block;
+
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+.hero-content {
+
+    direction: rtl;
+    text-align: right;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+.hero-content h1 {
+    color: var(--text-color);
+
+    font-family: "Estedad", sans-serif;
+
+    font-size: 60px;
+    font-weight: 900;
+
+    line-height: 1.60;
+    margin-bottom: 15px;
+
+    text-shadow: 3px 4px 4px rgba(0, 0, 0, 0.18);
+}
+
+
+.hero-content h1 span {
+    color: var(--pink-button);
+}
+.hero-content p {
+    color: var(--text-color2);
+
+    font-family: "Estedad", sans-serif;
+
+    font-size: 20px;
+    font-weight: 600;
+
+    line-height: 2;
+
+    text-align: right;
+
+    margin-bottom: 25px;
+}
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    direction: ltr;
+    gap: 30px;
+    margin-right: 55px;
+}
+
+
+
+
+.gallery-button {
+    height: 46px;
+
+    padding: 0 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+    
+
+    background-color: transparent;
+
+    color: var(--pink-button);
+
+    border: 1px solid var(--pink-button);
+
+    border-radius: 30px;
+
+    font-family: "Estedad", sans-serif;
+    font-size: 17px;
+    font-weight: 800;
+
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.gallery-button img {
+    width: 20px;
+    height: 20px;
+}
+.gallery-button:hover {
+    background-color: rgba(209, 78, 95, 0.12);
+}
+
+.hero-reservation-button {
+    height: 46px;
+
+    padding: 0 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    background-color: var(--pink-button);
+
+    color: white;
+
+    border: none;
+
+    border-radius: 30px;
+
+    font-family: "Estedad", sans-serif;
+    font-size: 17px;
+    font-weight: 900;
+
+    cursor: pointer;
+
+    box-shadow: 0 3px 8px rgba(209, 78, 95, 0.20);
+    transition: top 0.10s ease-in-out;
+    position: relative;
+}
+.hero-reservation-button img {
+    width: 22px;
+    height: 22px;
+    transition: top 0.10s ease-in-out;
+    position: relative;
+}
+.hero-reservation-button:hover {
+    top: -2px;
+}
+.gold-line {
+    display: block;
+    width: auto;
+    height: auto;
+    margin: 50px auto 0;
+}
+
+
+/* =========================
+   About Section
+========================= */
+
+.about {
+    width: 100%;
+    position: relative;
+    padding: 80px 0 240px;
+    overflow: visible;
+    direction: ltr;
+}
+
+
+
+/* Container */
+
+.about-container {
+
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    flex-direction: row;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 90px;
+
+}
+
+
+/* ================= Image ================= */
+
+.about-image {
+
+    width: 430px;
+    height: 430px;
+
+    position: relative;
+
+    flex-shrink: 0;
+
+}
+
+/* عکس اصلی */
+
+.salon-image {
+
+    width: 550px;
+    height: 550px;
+
+    position: absolute;
+
+    top: 160px;
+    left: -15px;
+
+    object-fit: contain;
+
+    display: block;
+}
+
+
+/* ================= Content ================= */
+
+.about-content {
+
+
+    text-align: right;
+
+    direction: rtl;
+
+}
+
+
+.about-subtitle {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    justify-content: flex-start;
+
+    color: #C8A56B;
+
+    font-size: 20px;
+
+    font-weight: 800;
+
+    margin-bottom: 10px;
+
+
+}
+
+
+.about-subtitle img {
+    width: 29px;
+    height: 29px;
+}
+
+
+.about-content h2 {
+
+    font-size: 43px;
+
+    line-height: 1.55;
+
+    font-weight: 900;
+
+    color: var(--text-color);
+
+    margin-bottom: 18px;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.18);
+
+}
+
+
+.about-content p {
+
+    color: var(--text-color2);
+
+    font-size: 19px;
+    text-align: justify;
+
+    font-weight: 600;
+
+    line-height: 2;
+
+    margin-bottom: 2px;
+
+    max-width: 650px;
+
+}
+
+
+
+
+
+
+
+/* =========================
+   Services Section
+========================= */
+
+.services {
+
+    width: 100%;
+
+    position: relative;
+
+    padding: 150px 0 80px;
+
+    overflow: hidden;
+
+    direction: rtl;
+
+}
+
+
+/* =========================
+   Background Flower
+========================= */
+
+.services::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 520px;
+    height: 520px;
+
+    top: -30px;
+    right: -40px;
+
+    background-image: url("../img/flower.png");
+
+    background-repeat: no-repeat;
+
+    background-position: center;
+
+    background-size: contain;
+
+    opacity: 0.10;
+
+    z-index: 0;
+
+    pointer-events: none;
+
+}
+
+
+/* =========================
+   Container
+========================= */
+
+.services-container {
+
+    width: 90%;
+
+    max-width: 980px;
+
+    margin: 0 auto;
+
+    position: relative;
+
+    transform: translateY(30px);
+
+}
+
+
+/* =========================
+   Title
+========================= */
+
+.services-title {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    margin-bottom: 35px;
+
+}
+
+
+.services-title h2 {
+
+    font-size: 35px;
+
+    font-weight: 900;
+
+    color: var(--text-color);
+
+    text-shadow: 0 3px 3px rgba(0, 0, 0, 0.15);
+
+}
+
+
+/* =========================
+   Services Grid
+========================= */
+
+.services-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(6, 1fr);
+
+    gap: 40px;
+
+    justify-content: center;
+
+}
+
+
+/* =========================
+   Service Card
+========================= */
+
+.service-card {
+    height: auto;
+    aspect-ratio: 1.1 / 1;
+
+    background-color: var(--card-background);
+    border: 2px solid var(--border-color);
+
+    border-radius: 30px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 10px;
+
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.06);
+
+    transition: 0.3s ease;
+
+}
+
+
+/* سه کارت ردیف اول */
+
+.service-card:nth-child(1) {
+
+    grid-column: span 2;
+
+}
+
+
+/* جای کارت دوم */
+
+.service-card:nth-child(2) {
+
+    grid-column: span 2;
+
+}
+
+
+/* جای کارت سوم */
+
+.service-card:nth-child(3) {
+
+    grid-column: span 2;
+
+}
+
+
+/* دو کارت ردیف دوم */
+
+.service-card:nth-child(4) {
+
+    grid-column: 2 / span 2;
+
+}
+
+
+.service-card:nth-child(5) {
+
+    grid-column: 4 / span 2;
+
+}
+
+
+/* =========================
+   Icon
+========================= */
+
+.service-icon1 {
+
+    width: 145px;
+
+    height: 145px;
+
+    object-fit: contain;
+
+    margin-bottom: 15px;
+    transform: translateY(-5px);
+
+}
+.service-icon2 {
+
+    width: 147px;
+
+    height: 147px;
+
+    object-fit: contain;
+
+    margin-bottom: 15px;
+    transform: translateX(8px) translateY(-10px);
+
+}
+.service-icon3 {
+
+    width: 125px;
+
+    height: 125px;
+
+    object-fit: contain;
+
+    margin-bottom: 15px;
+
+    transform: translateY(-4px);
+
+}
+.service-icon4 {
+
+    width: 118px;
+
+    height: 118px;
+
+    object-fit: contain;
+
+    margin-bottom: 30px;
+
+}
+.service-icon5 {
+
+    width: 130px;
+
+    height: 130px;
+
+    object-fit: contain;
+
+    margin-bottom: 15px;
+    transform: translateX(8px) translateY(-4px);
+
+}
+
+
+/* =========================
+   Card Title
+========================= */
+
+.service-card h3 {
+
+    color: #E76F79;
+
+    font-size: 20px;
+
+    font-weight: 900;
+
+    text-align: center;
+
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.15);
+
+
+}
+
+
+/* =========================
+   Hover
+========================= */
+
+.service-card:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow: 0 6px 15px rgba(209, 78, 95, 0.12);
+
+}
+
+
+.gold-line2 {
+    display: block;
+    width: auto;
+    height: auto;
+    margin: 100px auto 0;
+}
+
+
+
+
+
+/* =========================
+   Features Section
+========================= */
+
+.features {
+
+    width: 100%;
+
+    padding: 30px 0 80px;
+
+    direction: rtl;
+
+}
+
+
+/* =========================
+   Container
+========================= */
+
+.features-container {
+    width: 92%;
+    max-width: 1250px;
+
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+
+/* =========================
+   Feature Card
+========================= */
+
+.feature-card {
+    height: 220px;
+
+    background-color: var(--card-background);
+    border: 2px solid var(--border-color);
+
+    border-radius: 30px;
+
+    padding: 22px 28px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: right;
+
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.06);
+
+    transition: 0.3s ease;
+}
+
+
+/* =========================
+   Icon
+========================= */
+
+.feature-icon {
+
+    width: 40px;
+
+    height: 40px;
+
+    border-radius: 12px;
+
+    background-color: var(--icon-background);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 10px;
+
+}
+
+
+.feature-icon img {
+
+    width: 28px;
+
+    height: 28px;
+
+    object-fit: contain;
+
+}
+
+
+/* =========================
+   Title
+========================= */
+
+.feature-card h3 {
+
+    color: var(--text-color);
+
+    font-size: 25px;
+
+    font-weight: 900;
+
+    line-height: 1.5;
+
+    margin-bottom: 5px;
+
+}
+
+
+/* =========================
+   Description
+========================= */
+
+.feature-card p {
+
+    color: var(--text-color2);
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    line-height: 1.9;
+
+    margin: 0;
+
+}
+/* =========================
+   Hover
+========================= */
+.feature-card:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow: 0 6px 15px rgba(209, 78, 95, 0.12);
+
+}
+
+
+
+
+
+/* =========================
+   Portfolio Section
+========================= */
+
+.portfolio {
+
+    width: 100%;
+
+    padding: 50px 0 80px;
+
+    direction: rtl;
+
+}
+
+
+/* =========================
+   Container
+========================= */
+
+.portfolio-container {
+
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+}
+
+
+/* =========================
+   Header
+========================= */
+
+.portfolio-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 30px;
+
+}
+
+
+/* =========================
+   Title
+========================= */
+
+.portfolio-header h2 {
+
+    color: var(--text-color);
+
+    font-family: "Estedad", sans-serif;
+
+    font-size: 35px;
+
+    font-weight: 900;
+
+    line-height: 1.5;
+
+    text-shadow: 0 3px 3px rgba(0, 0, 0, 0.15);
+
+}
+
+
+/* =========================
+   Gallery Link
+========================= */
+
+.portfolio-link {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    color: var(--pink-button);
+
+    font-family: "Estedad", sans-serif;
+
+    font-size: 16px;
+
+    font-weight: 800;
+
+    text-decoration: none;
+
+    direction: rtl;
+
+}
+
+
+.portfolio-link span {
+
+    font-size: 22px;
+
+    line-height: 1;
+    
+    transition: transform 0.2s ease;
+}
+
+
+.portfolio-link:hover span{
+    transform: translateX(-3px);
+
+}
+
+
+/* =========================
+   Portfolio Grid
+========================= */
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 240px);
+    gap: 30px;
+    justify-content: center;
+    direction: rtl;
+    margin-top: 50px;
+}
+
+
+/* =========================
+   Portfolio Item
+========================= */
+
+.portfolio-item {
+    width: 240px;
+    height: 240px;
+    overflow: hidden;
+    border-radius: 28px;
+}
+
+
+/* =========================
+   Portfolio Image
+========================= */
+
+.portfolio-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+/* =========================
+   Portfolio Hover
+========================= */
+.portfolio-item:hover img {
+    transform: scale(1.08);
+}
+
+
+
+/* =========================
+   Stats Section
+========================= */
+
+.stats {
+    width: 100%;
+    padding: 80px 0 60px;
+    direction: rtl;
+    position: relative;
+    overflow: visible;
+}
+
+
+.stats::before {
+    content: "";
+
+    position: absolute;
+
+    width: 400px;
+    height: 400px;
+
+    top: -30px;
+    left: -80px;
+
+    background-image: url("../img/leaf.png");
+
+    background-repeat: no-repeat;
+
+    background-position: center;
+
+    background-size: contain;
+
+    opacity: 0.06;
+
+    z-index: 0;
+
+    pointer-events: none;
+    transform: rotate(-10deg);
+}
+
+
+.stats-container {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+    direction: ltr;
+
+    position: relative;
+    z-index: 1;
+}
+
+
+/* =========================
+   Stat Card
+========================= */
+
+.stat-card {
+    height: 170px;
+
+    background-color: var(--card-background);
+    border: 2px solid var(--border-color);
+
+    border-radius: 30px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+
+    transition: 0.3s ease;
+}
+
+
+
+/* =========================
+   Icon
+========================= */
+
+.stat-icon {
+    width: 42px;
+    height: 42px;
+
+    border-radius: 12px;
+
+    background-color: var(--icon-background);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 8px;
+}
+
+
+.diamond{
+    width: 27px;
+    height: 27px;
+
+    object-fit: contain;
+}
+.people{
+    width: 27px;
+    height: 27px;
+
+    object-fit: contain;
+}
+.graduate{
+    width: 35px;
+    height: 35px;
+
+    object-fit: contain;
+}
+.falling-star{
+    width: 29px;
+    height: 29px;
+
+    object-fit: contain;
+}
+
+
+/* =========================
+   Number
+========================= */
+
+.stat-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    direction: ltr;
+
+    color: var(--text-color);
+
+    font-size: 38px;
+    font-weight: 900;
+
+    line-height: 1.2;
+}
+
+.plus {
+    margin-left: 4px;
+    margin-right: 3px;
+}
+
+
+/* =========================
+   Text
+========================= */
+
+.stat-card p {
+    color: var(--text-color2);
+
+    font-size: 14px;
+    font-weight: 600;
+
+    margin-top: 5px;
+}
+
+
+
+
+/* =========================
+   CTA Section
+========================= */
+
+.cta {
+    width: 100%;
+    padding: 50px 0 55px;
+    direction: rtl;
+
+    position: relative;
+    z-index: 2;
+}
+
+.cta-container {
+    width: 90%;
+    max-width: 1200px;
+    min-height: 105px;
+
+    margin: 0 auto;
+
+    background-color: var(--text-color);
+
+    border-radius: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 20px 32px;
+}
+.cta-content {
+    text-align: right;
+    direction: rtl;
+}
+
+.cta-content h2 {
+    color: var(--text-color3);
+
+    font-size: 28px;
+    font-weight: 900;
+
+    line-height: 1.5;
+
+    margin-bottom: 2px;
+}
+
+.cta-content p {
+    color: var(--text-color3);
+
+    font-size: 14px;
+    font-weight: 600;
+
+    margin: 0;
+}
+.cta-button {
+    height: 50px;
+
+    padding: 0 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    background-color: var(--pink-button);
+
+    color: white;
+
+    border: none;
+
+    border-radius: 30px;
+
+    font-family: "Estedad", sans-serif;
+    font-size: 18px;
+    font-weight: 900;
+
+    cursor: pointer;
+
+    transition: top 0.10s ease-in-out;
+    position: relative;
+    direction: ltr;
+}
+.cta-button img {
+    width: 25px;
+    height: 25px;
+    transition: top 0.10s ease-in-out;
+    position: relative;
+}
+.cta-button:hover {
+    top: -2px;
+}
+body.dark-mode .cta-container {
+    background-color: #201E1E;
+}
+
+
+
+
+
+/* =========================
+   Footer
+========================= */
+
+.footer {
+    width: 100%;
+
+    background-color: var(--text-color);
+
+    color: white;
+
+    direction: rtl;
+
+    position: relative;
+    margin-top: 100px;
+}
+.footer-container {
+    width: 90%;
+    max-width: 1200px;
+
+    min-height: 300px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1.5fr 1fr;
+
+    align-items: start;
+
+    gap: 60px;
+    direction: ltr;
+
+    padding: 25px 0 20px;
+}
+.footer-column h3 {
+    color: var(--text-color3);
+
+    font-size: 19px;
+    font-weight: 900;
+
+    margin-bottom: 18px;
+}
+.footer-links {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    text-align: right;
+
+    padding-top: 20px;
+    direction: rtl;
+}
+
+.footer-links a {
+    color: var(--text-color3);
+
+    font-size: 15px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    margin-bottom: 9px;
+
+    transition: 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: var(--pink-button);
+
+    transform: translateX(-3px);
+}
+.footer-center {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+    direction: rtl;
+
+}
+.footer-logo {
+    width: 230px;
+    height: auto;
+
+    object-fit: contain;
+
+    margin-bottom: 5px;
+}
+.footer-center p {
+    color: var(--text-color3);
+
+    font-size: 14px;
+    font-weight: 600;
+
+    line-height: 1.8;
+
+    margin: 0;
+}
+.social-icons {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    direction: ltr;
+
+    gap: 28px;
+
+    margin-top: 25px;
+}
+.social-icon {
+    width: 34px;
+    height: 34px;
+
+    border: 1.5px solid #F5EEE6;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #F5EEE6;
+
+    text-decoration: none;
+
+    font-size: 19px;
+
+    transition: 0.2s ease;
+}
+.social-icon:hover {
+    color: var(--pink-button);
+
+    border-color: var(--pink-button);
+
+    transform: translateY(-2px);
+}
+.footer-contact {
+    padding-top: 20px;
+
+    text-align: right;
+    direction: rtl;
+}
+.contact-item {
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: flex-start;
+
+    gap: 10px;
+
+    margin-bottom: 13px;
+}
+.contact-item i {
+    color: var(--pink-button);
+
+    font-size: 17px;
+
+    width: 20px;
+
+    text-align: center;
+
+    margin-top: 3px;
+
+    flex-shrink: 0;
+}
+.contact-item p {
+    color: #F5EEE6;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    line-height: 1.7;
+
+    margin: 0;
+}
+.footer-bottom {
+    width: 100%;
+
+    border-top: 1px solid rgba(245, 238, 230, 0.25);
+
+    padding: 9px 3% 8px;
+
+    display: flex;
+
+    justify-content: flex-start;
+
+    direction: rtl;
+}
+.footer-bottom p {
+    color: rgba(245, 238, 230, 0.65);
+
+    font-size: 12px;
+    font-weight: 600;
+
+    margin: 0;
+}
+body.dark-mode .footer {
+    background-color: #201E1E;
+}
